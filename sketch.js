@@ -1,14 +1,18 @@
+
 $(document).ready(function(){
+
+
+	//FIX BORDER ISSUE -- 17 X 17 GRID NOT PROPER
 
 	//create pixel size(16px + borders(x2)) and container size(530px)
 	for(i = 0; i < 16 * 16; i++){
 		//add pixels to container
 		$('.container').append('<div class="grid"></div>');
 		var x = 16 *2;
-		var y = 530;
+		var y = 528;
 		var z = x + y;
 		//create container size
-		$('.container').css({'width':z,'height':z,'border':'1px'});
+		$('.container').css({'width':z,'height':z,'border':'1px solid black'});
 };	
 
 
@@ -20,11 +24,11 @@ $(document).ready(function(){
 	});
 
 
-	//when button is clicked, clear grid and ask for new
+	//when button is clicked, clear grid and ask for new size
 	$('button').on('click',function(){
 
 		//set default grid color
-		$(this).closest('#button').next().find('.grid').css('background-color','#333333');
+		$(this).closest('#button').next().find('.grid').css('background-color','#eeeeee');
 		var gridSize = prompt("what size do you want the grid?");		
 
 	//calculate grid size
@@ -35,13 +39,13 @@ $(document).ready(function(){
 
 	//calculate pixel size
 	function pxSize(num){
-		var pixelSize = 530/num;
+		var pixelSize = 532/num;
 		var n = pixelSize.toString(); 
 		return n;
 	};
 	//calculate pixel size with borders
 	function pxSize2(num){
-		var pixelSize = 530;
+		var pixelSize = 532;
 		var num = 2 *num;
 		var n = num + pixelSize;
 		//var n = pixelSize.toString(); 
@@ -103,6 +107,9 @@ function getRandomColor() {
 			$(this).css('background-color',getRandomColor());
 		});
 	});
+
+
+
 
 });
 

@@ -1,6 +1,6 @@
 body{
 	background-color: #e5e5ff;
-;
+	background-image: url('clouds.jpg');
 	color: white;
 }
 p{
@@ -9,7 +9,7 @@ p{
 }
 
 .header{
-	background-color: #b20000;
+	background-color: #9494FC;
 	border-bottom: 1px solid #444444;
 	width: 100%;
 	position: fixed;
